@@ -1,0 +1,239 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+}
+/* end of global======================= */
+.homebaner{
+    background-image: url('/img/xabout-img.jpg.pagespeed.ic.pSyy2zXeYH.webp');
+    background-size: cover;
+    width: 100%;
+    background-repeat:no-repeat;
+    height: 700px;
+    background-color: rgb(136, 136, 136);;
+    background-blend-mode:multiply;
+    position: relative;
+    display: flex;
+}
+.header{
+    display: flex;
+}
+.menu1{
+    position: fixed;
+    margin: 5px;
+    padding: 10px;
+    width: 98%;
+    z-index: 1;
+}
+.menu1>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.menu1>ul>li{
+    color: aliceblue;
+    margin-left: 20px;
+}
+.icon{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.menu2{
+    position: absolute;
+    margin: 5px;
+    padding: 15px;
+    width: 60%;
+    z-index: 1;
+    right: 0;
+}
+.menu2>ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu2>ul>li{
+    font-size: 11px;
+    
+}
+.menu2>ul>li>a{
+    color:white;
+    font-weight: 600;
+}
+.menu2{
+    display: none;
+}
+.submenu{
+    position: absolute;
+    width: 10%;
+    height: fit-content;
+    padding: 10px;
+    margin-top: 10px;
+    line-height: 20px;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .6s;
+    
+}
+.submenu>li>a{
+    color: black;
+}
+.menu2>ul>li:nth-of-type(6):hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+.banercontent{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    line-height: 35px;
+    color: rgb(255, 255, 255);
+
+}
+
+.banercontent>h1{
+    justify-content: center;
+    width: 300px;
+   
+}
+.border{
+    border-bottom:1px solid rgb(97, 12, 255);
+    
+}
+.border>a{
+    color: #6434fe !important;
+}
+/* end of section one----------- */
+.about-area{
+    padding: 10px;
+}
+.about-area>figure>img{
+    max-width: 100%;
+}
+.about-area>section>div:nth-of-type(1){
+    margin-top: 50px;
+}
+.about-area>section>div:nth-of-type(1)>h1{
+    color: #6434fe;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.p2{
+    color: rgba(0, 0, 0, 0.541);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.diamond{
+    font-size: 25px;
+    color: #6434fe;
+    
+}
+.about-area>section>div>a>h4{
+    margin-top: 20px;
+    color: black;
+}
+/* end section two===================== */
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color:rgb(34, 34, 34) ;
+    padding: 100px 10px;
+}
+footer>section>div>h4{
+    padding-bottom: 30px;
+    color: #fff;
+    font-size: 18px;
+}
+footer>div>p,
+footer>section>div>p{
+    margin-bottom: 1rem;
+    color:rgb(119, 119, 119);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.foot-num{
+    color: rgb(100, 52, 254) ;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+footer>section>div>input{
+    width: 290px;
+    line-height: 30px;
+}
+.copy-right{
+    margin-top: 30px;
+}
+.copy-right>ul{
+    display: flex;
+    height: 40px;
+    width: 200px;
+   
+    justify-content: space-between;
+}
+.copy-right>ul>li{
+    background-color: black;
+    height: 100%;
+   width: 100%;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.copy-right>ul>li>a{
+    color: #fff;
+}
+@media screen and (min-width:760px) {
+    .banercontent{
+        align-self: center;
+        width: 100%;
+    }
+    .icon{
+        display: none;
+    }
+    .menu2{
+        display: block;
+    }
+    .about-area{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+  
+    }
+    .about-area>section{
+        width: 50%;
+       
+    }
+    .about-area>section{
+        width: 100%;
+    }
+    .banercontent>h1{
+        font-size: 100px;
+        width: 100%;
+    }
+    footer>section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer>section>div>p{
+        width: 350px;
+    }
+    
+   footer>div{
+       display: flex;
+       justify-content: space-evenly;
+   }
+}
